@@ -1,0 +1,239 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #ccc;
+}
+
+/* Nav bar */
+.nav {
+    min-height: 42px;
+    background-color: #EF5122;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav_list {
+    padding-left: 0;
+    margin: auto 16px;
+}
+
+.nav_item {
+    color: #fff;
+    list-style: none;
+    display: inline-block;
+    margin: 0 8px;
+}
+
+/* Form Layout */
+.form_container {
+    margin: 36px auto 0 auto;
+    max-width: 720px;
+    padding: 32px;
+    background-color: #fff;
+}
+.form_row {
+    padding: 8px 0;
+    display: flex;
+
+}
+.form_text {
+    min-width: 90px;
+}
+.form_input {
+    flex: 1;
+}
+
+/* Column Layout */
+.column_layout {
+    margin-top: 32px;
+    padding: 12px 0;
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+}
+.column_item {
+    padding: 0 16px;
+    /* margin: 0 8px; */
+    /* flex: 1; */
+    line-height: 1.3;
+}
+.item1 {
+    flex: 1;
+}
+.item2 {
+    flex: 3;
+}
+.item3 {
+    flex: 1;
+}
+
+/* Feature Layout
+.feature_layout {
+    margin-top: 36px;
+    flex-direction: column;
+    justify-content: space-around;
+    display: flex;
+}
+.feature_items {
+    padding: 12px 16px;
+    margin-top: 16px;
+    flex-basis: 30%;
+}
+.feature_item1 {
+    background-color: rgba(162, 155, 200, 0.2);
+}
+.feature_item2 {
+    background-color: rgba(20, 130, 240, 0.2);
+}
+.feature_item3 {
+    background-color: rgba(160, 200, 100, 0.2);
+} */
+
+/* Feature layout */
+.feature_layout {
+    margin-top: 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+/* PC, Tablet */
+@media (min-width: 740px) {
+    .feature_layout {
+        flex-direction: row;
+    }
+}
+
+.feature_items {
+    padding: 12px 16px;
+    margin-top: 16px;
+    flex-basis: 30%;
+}
+
+/* .feature_items:nth-child(1) {
+    background-color: rgb(192, 227, 222);
+}
+
+.feature_items:nth-child(2) {
+    background-color: rgb(227, 200, 192);
+}
+
+.feature_items:nth-child(3) {
+    background-color: rgb(226, 192, 227);
+} */
+.feature_item1 {
+    background-color: rgba(162, 155, 200, 0.2);
+}
+.feature_item2 {
+    background-color: rgba(20, 130, 240, 0.2);
+}
+.feature_item3 {
+    background-color: rgba(160, 200, 100, 0.2);
+}
+
+/* Wrap Layout */
+.wrap_layout {
+    background-color: #fff;
+    margin-top: 36px;
+    padding: 12px 0 32px 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.wrap_item {
+    background-color: #ef5122;
+    color: #fff;
+    width: 148px;
+    height: 90px;
+    text-align: center;
+    line-height: 90px;
+    font-size: 48px;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+/* Center Layout */
+.center_layout {
+    background-color: aqua;
+    display: flex;
+    margin: 36px auto;
+    max-width: 740px;
+    min-height: 350px;
+    justify-content: center;
+    align-items: center;
+}
+.center_item {
+    color: #000;
+    /* margin: auto; */ /* Thay thế cho justify-content: center và align-item: center */
+    font-size: 42px;
+}
+
+/* Chart Layout */
+.chart_layout {
+    margin: 36px auto 0 auto;
+    padding: 32px 0;
+    height: 320px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+}
+
+.chart_item {
+    align-self: flex-end;
+    width: 60px;
+    color: #fff;
+    text-align: center;
+    height: var(--percent);
+    background-color: #EF5122;
+    animation: growth ease-in 0.7s;
+}
+
+@keyframes growth {
+    from {
+        opacity: 0;
+        height: calc(var(--percent) - 50%);
+    }
+    to {
+        opacity: 1;
+        height: var(--percent);
+    }
+}
+
+/* Footer */
+.footer {
+    min-height: auto;
+    max-width: 750px;
+    display: flex;
+    margin: 46px auto;
+    padding: 32px auto;
+}
+.footer_1 {
+    background-color: rgba(231, 245, 244, 0.923);
+    flex: 1;
+    padding: 4px 16px;
+}
+.footer_2 {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: stretch;
+}
+.footer_2_first {
+    background-color: rgba(30, 200, 150, 0.3);
+    padding: 4px 16px;
+    flex: 1;
+}
+.footer_2_second {
+    background-color: rgba(200, 100, 70, 0.3);
+    padding: 4px 16px;
+    flex: 1;
+}

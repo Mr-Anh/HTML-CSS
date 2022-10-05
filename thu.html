@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+    body {
+        text-align: center;
+    }
+
+    .laptop, .mobile, .tablet {
+        display: none;
+    }
+
+    @media (min-width: 1024px) {
+        .laptop {
+            display: block;
+        }
+    }
+
+    @media (min-width: 740px) and (max-width: 1023px) {
+        .tablet {
+            display: block;
+        }
+    }
+
+    @media (max-width: 740px) {
+        .mobile {
+            display: block;
+        }
+    }
+
+</style>
+
+<body>
+    <h1 class="laptop">Laptop</h1>
+    <h1 class="tablet">Tablet</h1>
+    <h1 class="mobile">Mobile</h1>
+</body>
+</html>
